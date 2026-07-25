@@ -2,6 +2,11 @@ import DOMPurify from "dompurify";
 import { marked } from "marked";
 import { useMemo, useState } from "react";
 
+marked.setOptions({
+  gfm: true,
+  breaks: true,
+});
+
 const initialMarkdown = `# The Dig Lab
 
 Markdown을 입력하면 **오른쪽에서 즉시 미리보기**가 표시됩니다.
@@ -12,6 +17,13 @@ Markdown을 입력하면 **오른쪽에서 즉시 미리보기**가 표시됩니
 - **굵은 글씨**
 - [링크](https://github.com)
 - 코드 블록
+
+> 인용문도 명확하게 구분됩니다.
+
+| 기능 | 지원 |
+| --- | :---: |
+| GitHub Flavored Markdown | ✅ |
+| 줄바꿈 | ✅ |
 
 \`\`\`ts
 const message = "Hello, The Dig Lab";
