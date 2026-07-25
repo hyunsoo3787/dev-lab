@@ -380,45 +380,159 @@ main {
   background: #fff;
 }
 
-.page-intro {
-  margin-bottom: 48px;
+.learn-hero {
+  display: grid;
+  grid-template-columns: 1.25fr .75fr;
+  align-items: end;
+  gap: clamp(40px, 8vw, 110px);
+  padding: 42px 0 64px;
 }
 
-.timeline {
-  display: grid;
-  gap: 16px;
+.learn-hero h1 {
+  margin: 0;
+  max-width: 760px;
+  font-size: clamp(44px, 7vw, 78px);
+  line-height: 1.05;
+  letter-spacing: -.055em;
 }
 
-.timeline-item {
+.learn-hero-copy {
+  padding-bottom: 8px;
+}
+
+.learn-hero-copy p {
+  margin: 18px 0 0;
+  color: #a3adc5;
+  line-height: 1.75;
+}
+
+.series-count {
+  display: inline-flex;
+  padding: 7px 10px;
+  border: 1px solid #303b5d;
+  border-radius: 999px;
+  color: #c9d1eb;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.series-list {
   display: grid;
-  grid-template-columns: 86px 1fr;
-  gap: 24px;
-  padding: 28px;
+  gap: 14px;
+}
+
+.series-card {
+  --series-accent: #8fa0ff;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 90px 1fr 50px;
+  gap: 28px;
+  padding: 32px;
   border: 1px solid #252e49;
-  border-radius: 20px;
-  background: #101626;
+  border-radius: 24px;
+  background: linear-gradient(105deg, rgba(18, 24, 43, .96), rgba(13, 18, 32, .88));
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
 }
 
-.timeline-number {
-  color: #7f8dca;
-  font-size: 30px;
+.series-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: var(--series-accent);
+  opacity: .8;
+}
+
+.series-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--series-accent) 52%, #252e49);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, .24);
+}
+
+.series-card-violet { --series-accent: #9b8cff; }
+.series-card-blue { --series-accent: #66a7ff; }
+.series-card-mint { --series-accent: #55d6b0; }
+.series-card-orange { --series-accent: #ffad66; }
+.series-card-pink { --series-accent: #f382b3; }
+
+.series-index {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  color: var(--series-accent);
+  font-size: 28px;
   font-weight: 900;
 }
 
-.timeline-item h2 {
+.series-index i {
+  width: 36px;
+  height: 2px;
+  background: var(--series-accent);
+  opacity: .65;
+}
+
+.series-category {
+  color: var(--series-accent);
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: .16em;
+}
+
+.series-content h2 {
+  margin: 8px 0 10px;
+  font-size: clamp(25px, 3vw, 34px);
+  letter-spacing: -.03em;
+}
+
+.series-content p {
+  max-width: 760px;
   margin: 0;
-}
-
-.timeline-item p {
   color: #9da8c0;
+  line-height: 1.7;
 }
 
-.timeline-item button {
-  padding: 8px 12px;
-  border: 1px solid #2d3651;
-  border-radius: 999px;
-  background: transparent;
-  color: #6f7890;
+.series-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 20px;
+}
+
+.series-tags span {
+  padding: 6px 9px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .045);
+  color: #9aa6c1;
+  font-size: 11px;
+}
+
+.series-open {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  align-self: center;
+  border: 1px solid #303a58;
+  border-radius: 50%;
+  color: #cdd5eb;
+  font-size: 20px;
+  transition: color .2s ease, background .2s ease, transform .2s ease;
+}
+
+.series-card:hover .series-open {
+  color: #0d1220;
+  background: var(--series-accent);
+  transform: rotate(5deg);
+}
+
+.learn-note {
+  margin: 28px 0 0;
+  color: #69748e;
+  text-align: center;
+  font-size: 13px;
 }
 
 .not-found {
@@ -457,6 +571,11 @@ main {
     flex-direction: column;
   }
 
+  .learn-hero {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
   .editor-grid,
   .playground-grid {
     min-height: auto;
@@ -488,8 +607,22 @@ main {
     padding: 54px 0;
   }
 
-  .timeline-item {
-    grid-template-columns: 1fr;
+  .series-card {
+    grid-template-columns: 54px 1fr;
+    gap: 16px;
+    padding: 24px 20px;
+  }
+
+  .series-open {
+    display: none;
+  }
+
+  .learn-hero {
+    padding: 18px 0 42px;
+  }
+
+  .series-index {
+    font-size: 22px;
   }
 
   .site-footer {

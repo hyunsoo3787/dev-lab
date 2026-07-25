@@ -15,8 +15,8 @@ const cards = [
   },
   {
     eyebrow: "LEARN",
-    title: "AI Architecture Map",
-    description: "LLM, RAG, Inference, Agent 시리즈를 하나의 흐름으로 정리합니다.",
+    title: "AI Learning Path",
+    description: "LLM 학습부터 추론, RAG, 에이전트와 API Gateway까지 하나의 흐름으로 읽습니다.",
     path: "/learn",
   },
 ];
