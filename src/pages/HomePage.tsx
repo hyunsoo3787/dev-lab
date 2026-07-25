@@ -28,7 +28,7 @@ export function HomePage() {
             <span className="status-dot" />
             LEARN · BUILD · PREVIEW
           </div>
-          <h1>AI 학습과<br /><span>개발 도구</span></h1>
+          <h1>Learn <span>&amp; Tools</span></h1>
           <p className="hero-copy">
             AI 관련 글과 브라우저에서 바로 사용할 수 있는 개발 도구를 모았습니다.
           </p>
