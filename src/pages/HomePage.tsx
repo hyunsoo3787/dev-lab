@@ -5,14 +5,14 @@ const tools = [
     eyebrow: "WRITE",
     icon: "M↓",
     title: "Markdown Preview",
-    description: "문서를 작성하면서 렌더링 결과를 실시간으로 확인하세요.",
+    description: "Markdown을 입력하고 렌더링 결과를 확인합니다.",
     path: "/tools/markdown-preview",
   },
   {
     eyebrow: "BUILD",
     icon: "</>",
     title: "HTML + CSS Preview",
-    description: "작은 아이디어를 브라우저에서 바로 코드로 실험해 보세요.",
+    description: "HTML과 CSS를 입력하고 결과를 확인합니다.",
     path: "/tools/html-css-preview",
   },
 ];
@@ -28,14 +28,13 @@ export function HomePage() {
             <span className="status-dot" />
             LEARN · BUILD · PREVIEW
           </div>
-          <h1>깊이 이해하고,<br /><span>직접 만들어보기.</span></h1>
+          <h1>AI 학습과<br /><span>개발 도구</span></h1>
           <p className="hero-copy">
-            AI 시스템을 이해하기 위한 글과, 아이디어를 곧바로 시험할 수 있는
-            가벼운 브라우저 도구를 한곳에 모았습니다.
+            AI 관련 글과 브라우저에서 바로 사용할 수 있는 개발 도구를 모았습니다.
           </p>
           <div className="hero-actions">
             <Link className="button button-primary" to="/learn">
-              학습 시작하기 <span aria-hidden="true">→</span>
+              학습 시리즈 <span aria-hidden="true">→</span>
             </Link>
             <Link className="button button-ghost" to="/tools/markdown-preview">
               도구 둘러보기
@@ -67,8 +66,8 @@ export function HomePage() {
       <section className="home-learning">
         <div className="learning-copy">
           <p className="eyebrow">LEARNING PATH</p>
-          <h2>모델부터<br />서비스까지</h2>
-          <p>서로 떨어져 보이는 AI 개념을 실제 시스템이 만들어지는 순서로 연결했습니다.</p>
+          <h2>AI 학습<br />시리즈</h2>
+          <p>LLM 학습, 추론, RAG, 에이전트와 API Gateway를 다룹니다.</p>
           <Link className="text-link" to="/learn">전체 시리즈 보기 <span>↗</span></Link>
         </div>
         <Link className="topic-track" to="/learn" aria-label="AI 학습 시리즈 전체 보기">
@@ -86,9 +85,9 @@ export function HomePage() {
         <div className="section-heading tools-heading">
           <div>
             <p className="eyebrow">PLAYGROUND</p>
-            <h2>생각을 바로 실행으로</h2>
+            <h2>브라우저 도구</h2>
           </div>
-          <p>설치도, 로그인도 없이 브라우저에서 바로 사용할 수 있습니다.</p>
+          <p>설치나 로그인 없이 사용할 수 있습니다.</p>
         </div>
 
         <div className="tool-card-grid">

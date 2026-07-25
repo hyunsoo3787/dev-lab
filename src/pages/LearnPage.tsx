@@ -52,13 +52,13 @@ export function LearnPage() {
       <header className="learn-hero">
         <div>
           <p className="eyebrow">LEARNING PATH</p>
-          <h1>AI 시스템을<br />한 겹씩 파고들기</h1>
+          <h1>AI 학습 시리즈</h1>
         </div>
         <div className="learn-hero-copy">
           <span className="series-count">05 SERIES</span>
           <p>
-            모델의 학습에서 시작해 추론, 검색, 에이전트, 운영 인프라까지.
-            서로 이어지는 개념을 시리즈 첫 글부터 차근차근 만나보세요.
+            LLM 학습부터 추론, RAG, 에이전트, API Gateway까지
+            주제별 시리즈를 모았습니다.
           </p>
         </div>
       </header>
